@@ -1,0 +1,18 @@
+prototype(S:BodyScripts) < prototype(F:Array) {
+  mainSiteJs = F:Tag {
+    tagName = 'script'
+    attributes {
+      type = 'text/javascript'
+      src = OpsDev.CacheBreaker:ResourceUri {
+          path = 'resource://Vectoholic.Site/Public/JavaScript/main.min.js'
+      }
+    }
+  }
+
+  googleAnalyticsJs = F:Tag {
+    tagName = 'script'
+    content = S:GoogleAnalytics
+    @if.onlyInProductionContext = ${String.startsWith(Configuration.setting('Neos.Flow.core.context'), 'Production')}
+    @if.trackingCodeIsSet = ${Configuration.setting('VectoholicSite.GoogleAnalytics.trackingCode')}
+  }
+}

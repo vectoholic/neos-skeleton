@@ -1,0 +1,29 @@
+prototype(S:AbstractPage) < prototype(Page) {
+  // include all head tags like styles and scripts
+  head = S:HeadTags {
+    titleTag {
+      content.@process.addBrand = ${value}
+    }
+  }
+
+  header = S:Header {
+    @position = 'before body'
+  }
+
+  // add the page type class to the body tag by resolving it from the property "_nodeType"
+  bodyTag {
+    attributes.class = ${String.firstLetterToLowerCase(String.replace(q(node).property('_nodeType'), 'Vectoholic.Site:', ''))}
+  }
+
+  body {
+
+  }
+
+  footer = S:Footer {
+    @position = 'after body'
+  }
+
+  bodyScripts = S:BodyScripts {
+    @position = 'after footer'
+  }
+}

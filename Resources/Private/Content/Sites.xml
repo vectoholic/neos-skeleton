@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <site name="www.example.com" state="1" siteResourcesPackageKey="Vectoholic.Site" siteNodeName="mainwebsite">
+  <nodes formatVersion="2.0">
+   <node identifier="0696539c-0f38-44a9-9b8f-d660c9e1c856" nodeName="mainwebsite">
+    <variant sortingIndex="100" workspace="live" nodeType="Vectoholic.Site:Homepage" version="1" removed="" hidden="" hiddenInIndex="">
+     <accessRoles __type="array"/>
+     <creationDateTime __type="object" __classname="DateTime">2017-08-28T13:07:25+00:00</creationDateTime>
+     <lastModificationDateTime __type="object" __classname="DateTime">2017-08-28T13:07:25+00:00</lastModificationDateTime>
+     <properties>
+      <uriPathSegment __type="string">home</uriPathSegment>
+      <canonicalLink __type="string"></canonicalLink>
+      <title __type="string">Home</title>
+     </properties>
+    </variant>
+    <node identifier="a68e2cec-6820-ef9c-d377-f64dfc6e78a9" nodeName="main">
+     <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="1" removed="" hidden="" hiddenInIndex="">
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2017-08-28T13:07:25+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2017-08-28T13:07:25+00:00</lastModificationDateTime>
+      <properties/>
+     </variant>
+    </node>
+   </node>
+  </nodes>
+ </site>
+</root>

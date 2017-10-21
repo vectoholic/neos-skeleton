@@ -1,0 +1,24 @@
+prototype(S:LinkTag) < prototype(F:Tag) {
+  // The api
+  // @var link <string> | <Node>
+  link = ''
+  @context.link = ${this.link}
+
+  tagName = 'a'
+  attributes {
+    href = F:Case {
+      string {
+        condition = ${Type.isString(link)}
+        renderer = ${link}
+      }
+      node {
+        condition = ${Type.instance(link, 'Neos\ContentRepository\Domain\Model\Node')}
+        renderer = NodeUri {
+          node = ${link}
+        }
+      }
+    }
+    target = '_self'
+  }
+  @process.convertUris = ConvertUris
+}

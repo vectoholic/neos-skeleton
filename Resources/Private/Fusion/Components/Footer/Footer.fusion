@@ -1,0 +1,1 @@
+prototype(S:Footer) < prototype(S:Template)

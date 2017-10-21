@@ -1,0 +1,21 @@
+prototype(S:InlineTag) < prototype(F:Tag) {
+
+  // The api
+  // @var property <string>
+  // The name of the inline editable property set in configuration
+  property = ''
+  @context.property = ${this.property}
+
+  // The link source
+  // @var link <string> | <Node>
+  link = ${null}
+  @context.link = ${this.link}
+
+  tagName = ${this.link == null ? 'div' : 'a'}
+  content = ${q(node).property(this.property)}
+  content.@process.convertUris = ConvertUris
+  @process.contentElementEditable = ContentElementEditable {
+    property = ${property}
+  }
+
+}

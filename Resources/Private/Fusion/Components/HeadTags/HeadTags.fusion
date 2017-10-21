@@ -1,0 +1,26 @@
+prototype(S:HeadTags) < prototype(F:Array) {
+  iconTag = F:Tag {
+    @position = 'after titleTag'
+    tagName = 'link'
+    attributes {
+      rel = 'shortcut icon'
+      href = OpsDev.CacheBreaker:ResourceUri {
+          path = 'resource://Vectoholic.Site/Public/Images/favicon.ico'
+      }
+    }
+  }
+
+  stylesheets {
+    mainSiteCss = F:Tag {
+      tagName = 'link'
+      attributes {
+        id = 'main-css'
+        media = 'all'
+        rel = 'stylesheet'
+        href = OpsDev.CacheBreaker:ResourceUri {
+            path = 'resource://Vectoholic.Site/Public/Styles/main.min.css'
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+prototype(S:Homepage) < prototype(S:Template) {
+
+  content {
+    main = PrimaryContent {
+      nodePath = 'main'
+    }
+  }
+}

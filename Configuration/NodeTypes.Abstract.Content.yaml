@@ -1,0 +1,14 @@
+# All nodetypes that want to use new generators should inherit from these ones instead of "Neos.Neos:Content" and "Neos.Neos:Document"
+'Vectoholic.Site:Content':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    inspector:
+      groups:
+        properties:
+          label: i18n
+          icon: 'fa fa-cogs'
+  options:
+    fusion:
+      prototypeGenerator: Vectoholic\Site\Generators\DefaultContentPrototypeGenerator

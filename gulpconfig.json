@@ -1,0 +1,71 @@
+{
+  "source": {
+    "styleIncludePaths": [
+      "bower_components/bootstrap-sass/assets/stylesheets/",
+      "bower_components/components-font-awesome/scss/"
+    ],
+    "vendorStyles": [
+      "bower_components/swiper/dist/css/swiper.css",
+      "bower_components/swipebox/scss/swipebox.scss"
+    ],
+    "vendorScripts": [
+      "bower_components/jquery/dist/jquery.js",
+      "bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
+      "bower_components/swiper/dist/js/swiper.jquery.js",
+      "bower_components/swipebox/src/js/jquery.swipebox.js",
+      "bower_components/obisconcept-neos-ajax-form/Resources/Private/Assets/JavaScript/main.js",
+      "bower_components/obisconcept-neos-ajax-form/Resources/Private/Assets/JavaScript/backend.js",
+      "bower_components/obisconcept-neos-gallery/Resources/Private/Assets/JavaScript/main.js",
+      "bower_components/obisconcept-neos-gmaps/Resources/Private/Assets/JavaScript/main.js",
+      "bower_components/obisconcept-neos-gmaps/Resources/Private/Assets/JavaScript/backend.js",
+      "bower_components/obisconcept-neos-search/Resources/Private/Assets/JavaScript/main.js",
+      "bower_components/obisconcept-neos-swiper/Resources/Private/Assets/JavaScript/main.js"
+    ],
+    "vendorImageFolders": [
+      "bower_components/bootstrap-sass/assets/images/",
+      "bower_components/swipebox/src/img"
+    ],
+    "vendorFontFolders": [
+      "bower_components/bootstrap-sass/assets/fonts/",
+      "bower_components/components-font-awesome/fonts/"
+    ],
+    "styles": [
+      "Resources/Private/Fusion/Variables.scss",
+      "Resources/Private/Fusion/Mixins.scss",
+      "Resources/Private/Fusion/Vendors.scss",
+      "Resources/Private/Fusion/Components/**/*.scss",
+      "Resources/Private/Fusion/NodeTypes/**/*.scss"
+    ],
+    "scripts": [
+      "Resources/Private/Fusion/Components/**/*.js",
+      "Resources/Private/Fusion/NodeTypes/**/*.js"
+    ],
+    "imageFolder": "Resources/Private/Assets/Images/",
+    "fontFolder": "Resources/Private/Assets/Fonts/"
+  },
+  "dest": {
+    "styles": "Resources/Public/Styles",
+    "scripts": "Resources/Public/JavaScript",
+    "images": "Resources/Public/Images",
+    "fonts": "Resources/Public/Fonts"
+  },
+  "browsersyncWatch": [
+    "Configuration/**/*.*",
+    "Resources/**/*.*",
+    "!Resources/**/*.scss",
+    "!Resources/**/*.css",
+    "!Resources/Private/**/*.js"
+  ],
+  "backendBreakpoints": {
+    "half": {
+      "screen-sm": "1089px",
+      "screen-md": "1313px",
+      "screen-lg": "1521px"
+    },
+    "full": {
+      "screen-sm": "1410px",
+      "screen-md": "1634px",
+      "screen-lg": "1842px"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+'ObVectoholicis.Site:Homepage':
+  superTypes:
+    'Vectoholic.Site:PageMixin': true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': true
+  constraints:
+    nodeTypes:
+      'Vectoholic.Site:Homepage': false
+      '*': true
+  ui:
+    label: i18n
+    icon: 'icon-globe'

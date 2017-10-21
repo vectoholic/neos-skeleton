@@ -1,0 +1,76 @@
+Neos:
+  Form:
+    yamlPersistenceManager:
+      savePath: 'resource://Vectoholic.Site/Private/Form/'
+    presets:
+      contact:
+        title: 'Kontakt Formular'
+        parentPreset: bootstrap
+  Neos:
+    eventLog:
+      enabled: TRUE
+    userInterface:
+      translation:
+        autoInclude:
+          Vectoholic.Site:
+            - Main
+            - 'NodeTypes/*'
+  Fusion:
+    defaultContext:
+      'Vectoholic.String': 'Vectoholic\Site\Eel\Helper\StringHelper'
+
+ObisConcept:
+  includeFrontendAssets: false
+  NeosGmaps:
+    apiKey: ''
+  NeosBootstrapForm:
+    googleCaptcha:
+      contact-form:
+        secretkey: ''
+
+VectoholicSite:
+  GoogleAnalytics:
+    trackingCode: false
+Vectoholic:
+  NeosKickstart:
+    languages: [en, de]
+    nodeType:
+      subFolder: true
+      defaultContentNodeType: Vectoholic.Site:Content
+      defaultDocumentNodeType: Vectoholic.Site:Document
+      nodeTypeNamePrefix:
+        contentNodeTypes: Content
+        documentNodeTypes: Document
+      fusion:
+        targetPath: 'NodeTypes'
+        autoGenerate: false
+      template:
+        targetPath: 'Fusion/NodeTypes'
+        autoGenerate: true
+      javascript:
+        targetPath: 'Private/Fusion/NodeTypes'
+        autoGenerate: true
+      styles:
+        targetPath: 'Private/Fusion/NodeTypes'
+        suffix: '.scss'
+        autoGenerate: true
+      component:
+        subFolder: false
+        fusion:
+          targetPath: 'Components'
+          defaultPrototype: 'Vectoholic.Site:Template'
+          autoGenerate: true
+        template:
+          targetPath: 'Fusion/Components'
+          autoGenerate: true
+        javascript:
+          targetPath: 'Private/Fusion/Components'
+          suffix: '.js'
+          autoGenerate: true
+        styles:
+          targetPath: 'Private/Fusion/Components'
+          suffix: '.scss'
+          autoGenerate: true
+        translation:
+          suffix: '.xml'
+          autoGenerate: false

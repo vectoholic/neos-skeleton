@@ -1,0 +1,4 @@
+prototype(S:GoogleAnalytics) < prototype(S:Template) {
+  type = '_js'
+  trackingCode = ${Configuration.setting('VectoholicSite.GoogleAnalytics.trackingCode')}
+}

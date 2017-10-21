@@ -1,0 +1,29 @@
+prototype(S:BackgroundImage) < prototype(F:Renderer) {
+
+  // image settings
+  image = 'pass the resource object'
+  width = 'pass the needed width'
+  height = 'pass the needed height'
+
+  // make the variables global so it is available in the image uri
+  @context.image = ${this.image}
+  @context.width = ${this.width}
+  @context.height = ${this.height}
+
+  // resolve the uri from the resource object
+  src = ImageUri {
+    asset = ${image}
+    width = null
+    height = null
+    allowCropping = TRUE
+    allowUpScaling = TRUE
+  }
+
+  backgroundImageStyle = ${'background-image: url(\'' + this.src + '\')'}
+  @context.backgroundImageStyle = ${this.backgroundImageStyle}
+
+  // return the needed string for the style attribute
+  renderer = ${this.backgroundImageStyle}
+
+  @ignoreProperties = ${['image', 'width', 'height']}
+}

@@ -1,0 +1,21 @@
+// Bootstrap
+$icon-font-path: '../Fonts/bootstrap/';
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+// Font Awesome
+$fa-font-path: '../Fonts';
+
+@import 'font-awesome';
+
+// Swipebox
+#swipebox-slider {
+  .slide-loading {
+		background: url(../Images/loader.gif) no-repeat center center;
+	}
+}
+
+#swipebox-close {
+	background-image: url(../Images/icons.png);
+}

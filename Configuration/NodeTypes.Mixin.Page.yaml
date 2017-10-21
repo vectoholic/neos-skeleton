@@ -1,0 +1,11 @@
+'Vectoholic.Site:PageMixin':
+  abstract: true
+  superTypes:
+    'Vectoholic.Site:Document': true
+  ui:
+    inspector:
+      groups:
+        properties:
+          label: i18n
+          icon: 'icon-cogs'
+          tab: properties

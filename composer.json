@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Obis\\Site\\": "Classes"
+            "Vectoholic\\Site\\": "Classes"
         }
     }
 }
